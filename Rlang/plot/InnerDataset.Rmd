@@ -1,0 +1,80 @@
+---
+title: "InnerDataset"
+output: html_document
+---
+
+# 盘点那些常用的内置数据集
+
+## ggplot2::mpg
+
+-   一句话描述：现代图表教学最常用数据集
+-   类型：数值型 + 分类型 + 有缺失值。
+-   用途：适合演示散点图、箱线图、直方图、分面、分组、线图等绝大多数 ggplot2 功能
+
+```{r}
+data(mpg, package = "ggplot2")
+
+saveRDS(mpg, "ggplot2_mpg.rds")
+```
+
+## datasets::mtcars
+
+-   一句话描述：经典连续变量数据集
+-   类型：全是数值型变量。
+-   用途：适合演示散点图、回归线、热力图、箱线图、聚类图、主成分分析
+
+```{r}
+data(mtcars)
+
+saveRDS(mtcars, "mtcars.rds")
+```
+
+## datasets::iris
+
+-   一句话描述：机器学习与聚类的经典数据集
+-   类型：混合型（数值 + 分类）。
+-   用途：适合散点图矩阵、PCA 可视化、聚类分析图、分组箱线图、密度图。
+
+```{r}
+data(iris)
+
+saveRDS(iris, "iris")
+```
+
+## datasets::diamonds
+
+-   一句话描述：超大规模数据集（高密度图表演示）
+-   类型：混合型（数值 + 分类）
+-   用途：大样本绘图性能测试
+
+```{r}
+data(diamonds, package = "ggplot2")
+
+saveRDS(diamonds, "ggplot2_diamonds.rds")
+```
+
+## datasets::economics
+
+-   一句话描述：时间序列图演示
+-   类型：时序+数值
+-   用途：折线图、面积图、时间序列分面、滚动平均演示
+
+```{r}
+data(economics, package = "ggplot2")
+
+saveRDS(economics, "ggplot2_economics.rds")
+```
+
+## datasets::Titanic
+
+-   一句话描述：类别交叉统计表演示
+-   类型：混合型（数值 + 分类）
+-   用途：柱状图、堆叠图、马赛克图、热力图、交叉表统计
+
+```{r}
+data(Titanic)
+
+titanic_dataframe <- as.data.frame(Titanic)
+
+saveRDS(titanic_dataframe, "titanic_dataframe.rds")
+```
